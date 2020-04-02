@@ -13,7 +13,7 @@ double desigmoid(double x);                                     // NEURON
 void train(double input[][3], double *output, uint32_t n);
 double analyze(double input[]);
 
-void red (double *ar);
-void green(double ar[]);
-void blue (double ar[]);
-
+double red (double *ar);
+double green(double ar[]);
+double blue (double ar[]);
+void rgb(double ar[]);

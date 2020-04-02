@@ -2,9 +2,9 @@
 #include <stdlib.h>
 
 #include "final.h"
-
-static double synaptic_weights[3];
-
+double synaptic_weights[3];
+double defSW = 0.1;
+double alpha = 1;
 double dot (double *a, double *b, uint16_t n) {
     double re = 0;
     for (uint16_t i = 0; i < n; i++) {
@@ -18,7 +18,6 @@ double sigmoid(double x){
 	return re;
 }
 double sigmoid_derivative(double x){
-
     double re;
 	re = x * (1 - x);
 	return re;
@@ -38,7 +37,9 @@ void think_train(double input[][3], double output[]){
 }
 
 void train(double training_set_inputs[][3], double training_set_outputs[], uint32_t n){
-
+    synaptic_weights[0] = defSW;
+	synaptic_weights[1] = defSW;
+	synaptic_weights[2] = defSW;
 	for(uint32_t i = 0; i < n; i++){
 
 		double error[4];
@@ -79,11 +80,10 @@ void train(double training_set_inputs[][3], double training_set_outputs[], uint3
 		adjustments[1] = dot(error, &transpose[1][0], 4);
 		adjustments[2] = dot(error, &transpose[2][0], 4);
 
-		synaptic_weights[0] += adjustments[0];
-		synaptic_weights[1] += adjustments[1];
-		synaptic_weights[2] += adjustments[2];
+		synaptic_weights[0] += adjustments[0] * alpha;
+		synaptic_weights[1] += adjustments[1] * alpha;
+		synaptic_weights[2] += adjustments[2] * alpha;
 	}
-
 }
 //void train(double input[][3], double *output, uint32_t n){
 //
@@ -126,10 +126,13 @@ void train(double training_set_inputs[][3], double training_set_outputs[], uint3
 //        }
 //    }
 //}
-
+double reLu(double x) {
+    if (x > 0) return x;
+    else return 0.01 * x;
+}
 double analyze(double input[]) {
 	double result = dot(input, synaptic_weights, 3);
-	result = sigmoid(result);
+    result = sigmoid(result);
 	return result;
 }
 

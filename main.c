@@ -5,10 +5,11 @@
 int main()
 {
 //    char file;
-    double test[3] = {0,0,1};
-    red(test);
-    green(test);
-    blue(test);
-    allcolor();
+    double test[3] = {1,0.5,0.3};
+    //rgb(test);
+    char* s = "final.ppm";
+    allcolor(s);
+    //char* t = "";
+    //allcolor(t);
     return 0;
 }

@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1585845297 source:c:\users\user\onedrive\code\c++\ppm\identifycolor.c
+	"final.h"
+
+1585843270 c:\users\user\onedrive\code\c++\ppm\final.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+
+1585843316 source:c:\users\user\onedrive\code\c++\ppm\main.c
+	<stdio.h>
+	<stdlib.h>
+	"final.h"
+
+1585842608 source:c:\users\user\onedrive\code\c++\ppm\neuron.c
+	<stdio.h>
+	<stdlib.h>
+	"final.h"
+
+1585845936 source:c:\users\user\onedrive\code\c++\ppm\procedure.c
+	"final.h"
+

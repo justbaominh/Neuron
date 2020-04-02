@@ -32,9 +32,13 @@ Of course, only the first three lines of the image are text (readable ASCII) sho
 
 Now that we know that, you should make the following program.
 
-We're going to try to build a system that can differentiate between your image and other images of the same size and type. We will do this by adapting the neuron program we have to consist of three neurons, each for colors (r,g,b) and train them. The first step is to take the average of all colors in the entire image and pass this color to the neurons. Record the results in a file ('how red/green/blue is the image'). Next, instead of the entire image, use 4 quadrants in the image (in other words, divide the image into 4 regions, each 150x200 pixels) and do the same as above, but per region. Finally, divide length and width by 4 (so each region becomes 75x100 pixels) and again do the same operation storing the results.
+We're going to try to build a system that can differentiate between your image and other images of the same size and type. We will do this by adapting the neuron program we have to consist of three neurons,
+each for colors (r,g,b) and train them. The first step is to take the average of all colors in the entire image and pass this color to the neurons. Record the results in a file ('how red/green/blue is the image').
+Next, instead of the entire image, use 4 quadrants in the image (in other words, divide the image into 4 regions, each 150x200 pixels) and do the same as above, but per region. Finally, divide length and width by 4
+(so each region becomes 75x100 pixels) and again do the same operation storing the results.
 
-Once these are stored in a file, we can re-read them and store them in a struct and use them. Load in a different image (use a different seed when you generate, convert to PPM and pass through the neurons). Again store the results in a file, and read them back in to a struct. Now compare the two structs (be creative) to give a indication if this is your image or not, possibly as a percentage.
+Once these are stored in a file, we can re-read them and store them in a struct and use them. Load in a different image (use a different seed when you generate, convert to PPM and pass through the neurons).
+Again store the results in a file, and read them back in to a struct. Now compare the two structs (be creative) to give a indication if this is your image or not, possibly as a percentage.
 
 Make this program as complete as possible. For example you may want to implement a menu system where you can enter the path of the image to be loaded instead of hard coding this.
 

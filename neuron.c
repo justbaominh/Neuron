@@ -3,7 +3,6 @@
 
 #include "final.h"
 double synaptic_weights[3];
-double defSW = 0.1;
 double alpha = 1;
 double dot (double *a, double *b, uint16_t n) {
     double re = 0;
@@ -37,9 +36,6 @@ void think_train(double input[][3], double output[]){
 }
 
 void train(double training_set_inputs[][3], double training_set_outputs[], uint32_t n){
-    synaptic_weights[0] = defSW;
-	synaptic_weights[1] = defSW;
-	synaptic_weights[2] = defSW;
 	for(uint32_t i = 0; i < n; i++){
 
 		double error[4];
@@ -126,10 +122,7 @@ void train(double training_set_inputs[][3], double training_set_outputs[], uint3
 //        }
 //    }
 //}
-double reLu(double x) {
-    if (x > 0) return x;
-    else return 0.01 * x;
-}
+
 double analyze(double input[]) {
 	double result = dot(input, synaptic_weights, 3);
     result = sigmoid(result);

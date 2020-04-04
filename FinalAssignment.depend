@@ -20,3 +20,28 @@
 1585845936 source:c:\users\user\onedrive\code\c++\ppm\procedure.c
 	"final.h"
 
+1586009327 source:c:\users\acer\documents\github\neuron\main.c
+	<stdio.h>
+	<stdlib.h>
+	"final.h"
+	<string.h>
+
+1586007631 c:\users\acer\documents\github\neuron\final.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+
+1585867425 source:c:\users\acer\documents\github\neuron\procedure.c
+	"final.h"
+
+1586009773 source:c:\users\acer\documents\github\neuron\identifycolor.c
+	"final.h"
+
+1586009327 source:c:\users\acer\documents\github\neuron\neuron.c
+	<stdio.h>
+	<stdlib.h>
+	"final.h"
+
+1586009481 source:c:\users\acer\documents\github\neuron\compare.c
+	"final.h"
+

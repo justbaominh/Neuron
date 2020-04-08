@@ -26,3 +26,5 @@ int main() {
         compare("result.txt","resulttest.txt");
     return 0;
 }
+// I got a bug in main.c. If i run function "allcolor" (line 12 and 15) seperately (one of them becomes comments),
+// they will return correct answers. But if i run both of them together, second function will return wrong answers.
